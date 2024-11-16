@@ -5,9 +5,9 @@
 ## Features
 
 - **Configuration Parameters**:
-  - Organized storage of application-wide parameters and constants.
+  - Organised storage of application-wide parameters and constants.
 - **Global Parameter Handling**:
-  - Easy access to global variables, aiding in consistent and centralized management of constants.
+  - Easy access to global variables, aiding in consistent and centralised management of constants.
 
 
 ---
