@@ -25,4 +25,4 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - `config_params` module: tools for defining and managing configuration parameters
-- `global_parameters` module: storage and access of global constants for centralized management
+- `global_parameters` module: storage and access of global constants for centralised management
