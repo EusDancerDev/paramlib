@@ -99,7 +99,7 @@ filesystem_context_modules = ["os", "Path", "shutil", "subprocess"]  # 'Path' fr
 storage_entity_types = ["file", "directory"]
 
 # Regular expressions
-regex_passwords = r"^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[_\W]).+$"
+regex_passwords = r"^(?=.{8,})(?=.*[a-z\s])(?=.*[A-Z\s])(?=.*\d)(?=.*[_\W]).+$"
 
 # Strings
 common_delim_list = ["_", "-", ";", ",", "\n", "\t", " "]
