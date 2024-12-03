@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Move the `data_uploading_error_dict` dictionary from the `global_parameters` to `config_params`. This object contains intuitive error messages depending on the exception code raised by a SQLAlchemy operation.
+- Rename `config_dict` to `DATABASE_CREDENTIALS`. This variable will store the credentials for the database connection.
 
 ---
 
