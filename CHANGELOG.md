@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+---
+
+## [v3.3.0] - 2024-12-03
+
+### Changed
+
+- Move the `data_uploading_error_dict` dictionary from the `global_parameters` to `config_params`. This object contains intuitive error messages depending on the exception code raised by a SQLAlchemy operation.
+
+---
+
 ## [v3.2.0] - 2024-11-04
 
 ### Added
