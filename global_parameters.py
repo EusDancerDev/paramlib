@@ -104,15 +104,6 @@ regex_passwords = r"^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[_\W]).+$"
 # Strings
 common_delim_list = ["_", "-", ";", ",", "\n", "\t", " "]
 
-# Databases
-data_uploading_error_dict = {
-    "1007": "Database already exists",
-    "1045": "Wrong username",
-    "1049": "Unknown database name",
-    "1698": "Wrong password",
-    "2003": "Wrong host name"
-}
-
 #%% 4. SOCIO-ECONOMICAL CONCEPTS
 
 # Climate change
