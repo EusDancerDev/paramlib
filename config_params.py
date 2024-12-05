@@ -17,7 +17,7 @@ like credentials, host info, etc.
 #%% 1. PROGRAMMING CONCEPTS
 
 # Databases
-DATABASE_CREDENTIALS = {
+database_credentials = {
     "username": "username",
     "password": "cool-password",
     "host": "host",
