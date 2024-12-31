@@ -17,14 +17,14 @@ like credentials, host info, etc.
 #%% 1. PROGRAMMING CONCEPTS
 
 # Databases
-database_credentials = {
+DATABASE_CREDENTIALS = {
     "username": "username",
     "password": "cool-password",
     "host": "host",
     "database_name": "dbname"
 }
 
-data_uploading_error_dict = {
+DATA_UPLOADING_ERROR_DICT = {
     "1007": "Database already exists",
     "1045": "Wrong username",
     "1049": "Unknown database name",
