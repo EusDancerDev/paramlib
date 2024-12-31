@@ -31,3 +31,6 @@ DATA_UPLOADING_ERROR_DICT = {
     "1698": "Wrong password",
     "2003": "Wrong host name"
 }
+
+# JSON file path with registered information
+INFO_JSON_PATH = "users.json"
