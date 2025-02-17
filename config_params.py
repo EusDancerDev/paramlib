@@ -33,4 +33,4 @@ DATA_UPLOADING_ERROR_DICT = {
 }
 
 # JSON file path with registered information
-INFO_JSON_PATH = "users.json"
+USER_INFO_JSON_PATH = "users.json"
