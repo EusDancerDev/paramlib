@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [v3.3.2] - 2025-02-18
+
+### Changed
+
+**General**
+
+- In all modules, replace `method` with `function` to accurately refer to the code block that contains the function definition, where no object is instantiated.
+- In module `config_params`, the constant `INFO_JSON_PATH` has been renamed to `USER_INFO_JSON_PATH` to better reflect its purpose of storing user-specific information. This change improves code readability and maintainability.
+
+---
+
 ## [v3.3.0] - 2024-12-03
 
 ### Changed
