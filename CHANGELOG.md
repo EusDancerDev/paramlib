@@ -4,11 +4,26 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v3.3.2] - 2025-02-18
+## [v3.4.0] - 2025-04-24
 
 ### Changed
 
-#### **General**
+- Refactored package import structure:
+  - Replace direct imports with `__all__` definitions in the only package initiator file.
+  - Improved control over exported symbols when using 'from package import *'
+  - Maintained consistent public API while following Python best practices.
+
+- Module `config_params`:
+  - Add `port` field to `DATABASE_CREDENTIALS` dictionary.
+  - Rename variable `DATA_UPLOADING_ERROR_DICT` to `DB_ERROR_CODE_DICT` for better clarity and conciseness.
+
+---
+
+## [v3.3.2] - 2025-02-18
+
+### Changed (v3.3.2)
+
+#### **General** (v3.3.2)
 
 - In all modules, replace `method` with `function` to accurately refer to the code block that contains the function definition, where no object is instantiated.
 - In module `config_params`, the constant `INFO_JSON_PATH` has been renamed to `USER_INFO_JSON_PATH` to better reflect its purpose of storing user-specific information. This change improves code readability and maintainability.
