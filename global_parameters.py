@@ -102,7 +102,7 @@ storage_entity_types = ["file", "directory"]
 regex_passwords = r"^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[_\W]).+$"
 
 # Strings
-common_delim_list = ["_", "-", ";", ",", "\n", "\t", " "]
+common_delim_list = ["_", "-", ";", ":", ",", "\n", "\t", " "]
 
 #%% 4. SOCIO-ECONOMICAL CONCEPTS
 
