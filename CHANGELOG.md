@@ -4,9 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v3.4.0] - 2025-04-24
+## [v3.4.1] - 2025-04-24
 
 ### Changed
+
+- Module `global_parameters`:
+  - Convert all constant names to uppercase following Python naming conventions
+  - Update module documentation to reflect the uppercase naming convention
+
+---
+
+## [v3.4.0] - 2025-04-24
+
+### Changed (v3.4.0)
 
 - Refactored package import structure:
   - Replace direct imports with `__all__` definitions in the only package initiator file.
@@ -16,6 +26,8 @@ All notable changes to this project will be documented in this file.
 - Module `config_params`:
   - Add `port` field to `DATABASE_CREDENTIALS` dictionary.
   - Rename variable `DATA_UPLOADING_ERROR_DICT` to `DB_ERROR_CODE_DICT` for better clarity and conciseness.
+
+- Toggle uppercase all constant names in all modules.
 
 ---
 
