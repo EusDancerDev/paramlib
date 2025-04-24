@@ -3,8 +3,10 @@
 
 # paramlib/__init__.py
 
-__version__ = "3.3.2"
+__version__ = "3.3.3"
 
-from . import __init__
-from . import config_params
-from . import global_parameters
+# Define what should be available when using 'from paramlib import *'
+__all__ = [
+    'config_params',
+    'global_parameters'
+]
