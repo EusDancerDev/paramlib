@@ -11,20 +11,21 @@ like credentials, host info, etc.
 
 *GLOBAL PARAMETERS MODULE STRUCTURE*
 
-1. Programming Concepts
+Programming Concepts
 """
 
-#%% 1. PROGRAMMING CONCEPTS
+#%% PROGRAMMING CONCEPTS
 
 # Databases
 DATABASE_CREDENTIALS = {
     "username": "username",
     "password": "cool-password",
     "host": "host",
+    "port": "port",
     "database_name": "dbname"
 }
 
-DATA_UPLOADING_ERROR_DICT = {
+DB_ERROR_CODE_DICT = {
     "1007": "Database already exists",
     "1045": "Wrong username",
     "1049": "Unknown database name",
