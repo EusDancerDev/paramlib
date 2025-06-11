@@ -26,8 +26,8 @@ A Python library for parameter management and configuration handling.
   - Parameter constraints
   - Error handling and reporting
 
-- **Serialization**
-  - Parameter serialization to various formats
+- **Serialisation**
+  - Parameter serialisation to various formats
   - Configuration export/import
   - Parameter state management
   - Version control support
@@ -104,7 +104,7 @@ paramlib/
 │   │   ├── manager.py    # Configuration manager
 │   │   └── validators.py # Validation utilities
 │   └── utils/            # Utility functions
-│       ├── serializers.py # Serialization tools
+│       ├── serializers.py # Serialisation tools
 │       └── helpers.py     # Helper functions
 ├── tests/                # Test suite
 ├── docs/                 # Documentation
