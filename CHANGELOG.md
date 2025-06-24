@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [3.4.2] - 2025-06-25
+
+### Changed (3.4.2)
+
+#### **Global Parameters** (changing; 3.4.2)
+
+- Update variable names and key names:
+  - Changes have been made in the original file `global_parameters.py` in the `paramlib` package.
+  - These include abbreviation addressing and variable/key name standardisation.
+
+| Old variable name | New variable name |
+|:-----------------:|:-----------------:|
+| `BASIC_FOUR_RULES` | `BASIC_ARITHMETIC_OPERATORS` |
+| `COMMON_DELIM_LIST` | `COMMON_DELIMITER_LIST` |
+| `NON_STD_TIME_FORMAT_STRS` | `NON_STANDARD_TIME_FORMAT_STRS` |
+| `OPERATIONS_SETS_LIST` | `SET_OPERATIONS` |
+| `REGEX_PASSWORDS` | `PASSWORD_REGEX_PATTERN` |
+| `TIME_FREQUENCIES_SHORT_1` | `TIME_FREQUENCIES_ABBREVIATED` |
+| `TIME_FREQUENCIES_SHORTER_1` | `TIME_FREQUENCIES_BRIEF` |
+
+| Latest variable name | Old key name | New key name |
+|:-----------------:|:------------:|:------------:|
+| `BASIC_TIME_FORMAT_STRS` | `H_NODATESEP` | `H_NO_DATE_SEP` |
+| `BASIC_TIME_FORMAT_STRS` | `D_NODATESEP` | `D_NO_DATE_SEP` |
+| `CUSTOM_TIME_FORMAT_STRS` | `CT_EXCEL_SPANISH_NOBAR_D` | `CT_EXCEL_SPANISH_NO_BAR_D` |
+| `CUSTOM_TIME_FORMAT_STRS` | `CT_EXCEL_SPANISH_NOBAR_H` | `CT_EXCEL_SPANISH_NO_BAR_H` |
+| `NON_STANDARD_TIME_FORMAT_STRS` | `CFT_D` | `CTIME_D` |
+| `NON_STANDARD_TIME_FORMAT_STRS` | `CFT_H` | `CTIME_H` |
+| `NON_STANDARD_TIME_FORMAT_STRS` | `CFT_M` | `CTIME_M` |
+
+---
+
 ## [3.4.1] - 2025-04-24
 
 ### Changed (3.4.1)
