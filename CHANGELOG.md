@@ -24,8 +24,8 @@ All notable changes to this project will be documented in this file.
 | `TIME_FREQUENCIES_SHORT_1` | `TIME_FREQUENCIES_ABBREVIATED` |
 | `TIME_FREQUENCIES_SHORTER_1` | `TIME_FREQUENCIES_BRIEF` |
 
-| Latest variable name | Old key name | New key name |
-|:-----------------:|:------------:|:------------:|
+| Dictionary variable (latest name) | Old key name | New key name |
+|:----------------------------------:|:------------:|:------------:|
 | `BASIC_TIME_FORMAT_STRS` | `H_NODATESEP` | `H_NO_DATE_SEP` |
 | `BASIC_TIME_FORMAT_STRS` | `D_NODATESEP` | `D_NO_DATE_SEP` |
 | `CUSTOM_TIME_FORMAT_STRS` | `CT_EXCEL_SPANISH_NOBAR_D` | `CT_EXCEL_SPANISH_NO_BAR_D` |
