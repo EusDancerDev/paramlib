@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [3.4.2] - 2025-06-25
+## [3.4.3] - 2025-06-25
 
-### Changed (3.4.2)
+### Changed (3.4.3)
 
-#### **Global Parameters** (changing; 3.4.2)
+#### **Global Parameters** (changing; 3.4.3)
 
 - Update variable names and key names:
   - Changes have been made in the original file `global_parameters.py` in the `paramlib` package.
