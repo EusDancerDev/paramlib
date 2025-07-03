@@ -1,6 +1,6 @@
 # paramlib
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyPI Version](https://img.shields.io/pypi/v/paramlib.svg)](https://pypi.org/project/paramlib/)
 
@@ -36,30 +36,96 @@
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- No external dependencies required (pure Python)
+- **Python 3.10+**: Required for modern type annotations and features
+- **No external dependencies**: Pure Python library with minimal requirements
 
-### Using pip
+### For Regular Users
+
+**For regular users** who want to use the package in their projects:
 
 ```bash
 pip install paramlib
 ```
 
-### Using conda
+This automatically installs `paramlib` and all its dependencies from PyPI.
+
+### Package Updates
+
+To stay up-to-date with the latest version of this package, simply run:
 
 ```bash
-conda install -c conda-forge paramlib
+pip install --upgrade paramlib
 ```
 
-### Development Installation
+## Development Setup
 
-For development purposes, you can install the package in editable mode:
+### For Contributors and Developers
+
+If you're planning to contribute to the project or work with the source code, follow these setup instructions:
+
+#### Quick Setup (Recommended)
 
 ```bash
-git clone https://github.com/yourusername/paramlib.git
+# Clone the repository
+git clone https://github.com/EusDancerDev/paramlib.git
 cd paramlib
+
+# Install in editable mode with all dependencies
 pip install -e .
 ```
+
+**Note**: The `-e` flag installs the package in "editable" mode, meaning changes to the source code are immediately reflected without reinstalling.
+
+This will automatically install all dependencies and set up the development environment.
+
+#### Manual Setup (Advanced)
+
+If you prefer to install dependencies manually:
+
+```bash
+# Clone the repository
+git clone https://github.com/EusDancerDev/paramlib.git
+cd paramlib
+
+# Install paramlib in editable mode
+pip install -e .
+```
+
+If you encounter import errors after cloning:
+
+1. **Ensure dependencies are installed**: Run `pip install -e .` in the project directory
+2. **Verify Python environment**: Make sure you're using a compatible Python version (3.10+)
+3. **Check package structure**: Ensure all `__init__.py` files are present
+
+### Verify Installation
+
+To verify that your installation is working correctly, you can run this quick test:
+
+```python
+# Test script to verify installation
+try:
+    import paramlib
+    from paramlib.global_parameters import COMMON_DELIMITER_LIST, BASIC_TIME_FORMAT_STRS
+    from paramlib.config_params import DATABASE_CREDENTIALS
+    
+    print("✅ All imports successful!")
+    print(f"✅ paramlib version: {paramlib.__version__}")
+    print("✅ Installation is working correctly.")
+    
+except ImportError as e:
+    print(f"❌ Import error: {e}")
+    print("💡 For regular users: pip install paramlib")
+    print("💡 For developers: pip install -e .")
+```
+
+### Implementation Notes
+
+This project is a **pure Python library** with no interdependent package dependencies:
+
+- **Self-contained**: All functionality is provided within the package itself
+- **No external dependencies**: Only requires pandas and numpy for enhanced functionality
+- **Easy setup**: Simple installation process for both users and developers
+- **Consistent structure**: Follows the same development setup pattern as other packages
 
 ## Usage
 
@@ -73,8 +139,8 @@ from paramlib.global_parameters import (
 )
 
 # Access time format strings
-datetime_format = BASIC_TIME_FORMAT_STRS["H"]  # "%Y-%m-%d %H:%M:%S"
-date_only_format = BASIC_TIME_FORMAT_STRS["D"]  # "%Y-%m-%d"
+datetime_format = BASIC_TIME_FORMAT_STRS["H"]  # "%F %T"
+date_only_format = BASIC_TIME_FORMAT_STRS["D"]  # "%F"
 
 # Use common delimiters
 delimiter = COMMON_DELIMITER_LIST[0]  # "_"
@@ -124,7 +190,7 @@ from paramlib.global_parameters import (
 )
 
 # Non-standard time formats
-ctime_format = NON_STANDARD_TIME_FORMAT_STRS["CTIME_H"]  # "%a %b %d %H:%M:%S %Y"
+ctime_format = NON_STANDARD_TIME_FORMAT_STRS["CTIME_H"]  # "%a %b %d %T %Y"
 
 # Custom Excel-compatible formats
 excel_format = CUSTOM_TIME_FORMAT_STRS["CT_EXCEL_SPANISH_D"]  # "%d/%m/%y"
@@ -244,21 +310,24 @@ paramlib/
 ## Key Constants Reference
 
 ### Time Format Strings
+
 ```python
 BASIC_TIME_FORMAT_STRS = {
-    "H": "%Y-%m-%d %H:%M:%S",        # Full datetime
-    "D": "%Y-%m-%d",                 # Date only
+    "H": "%F %T",        # Full datetime
+    "D": "%F",                 # Date only
     "M": "%Y-%m",                    # Year-month
     "Y": "%Y"                        # Year only
 }
 ```
 
 ### Common Delimiters
+
 ```python
 COMMON_DELIMITER_LIST = ["_", "-", ";", ":", ",", "\n", "\t", " "]
 ```
 
 ### Database Configuration
+
 ```python
 DATABASE_CREDENTIALS = {
     "username": "username",
@@ -270,22 +339,11 @@ DATABASE_CREDENTIALS = {
 ```
 
 ### Climate Science Parameters
+
 ```python
 EMISSION_RCP_SCENARIOS = ["historical", "rcp26", "rcp45", "rcp85"]
 CLIMATE_FILE_EXTENSIONS = ["nc", "grib", "netcdf_zip", "csv"]
 ```
-
-## Version Information
-
-Current version: **3.4.2**
-
-### Recent Updates (v3.4.2)
-- Updated variable names and key names for better standardisation
-- Addressed abbreviations and improved naming consistency
-- Enhanced time format string organisation
-- Improved dictionary key naming conventions
-
-For detailed version history, see [CHANGELOG.md](CHANGELOG.md).
 
 ## Naming Conventions
 
@@ -354,18 +412,21 @@ def process_climate_files(directory_path):
 ## Best Practices
 
 ### Parameter Usage
+
 - Import only the parameters you need to avoid namespace pollution
 - Use descriptive variable names when assigning parameter values
 - Document parameter usage in your code for maintainability
 - Follow the established naming conventions when extending parameters
 
 ### Configuration Management
+
 - Always copy dictionary templates before modifying them
 - Validate parameter values before using them in production code
 - Use the provided error mappings for consistent error handling
 - Keep configuration separate from business logic
 
 ### Version Compatibility
+
 - Check the changelog when updating to new versions
 - Test parameter-dependent code when upgrading
 - Use version pinning for production deployments
@@ -373,8 +434,8 @@ def process_climate_files(directory_path):
 
 ## System Requirements
 
-- **Python**: 3.8 or higher
-- **Dependencies**: None (pure Python library)
+- **Python**: 3.10 or higher
+- **Dependencies**: pandas and numpy (optional, for enhanced functionality)
 - **Memory**: Minimal (constants are loaded on import)
 - **Performance**: Instant access to all parameters
 
@@ -394,8 +455,6 @@ Contributions are welcome! Please feel free to submit a Pull Request for:
 3. **Document changes**: Update CHANGELOG.md with parameter additions/modifications
 4. **Test compatibility**: Ensure changes don't break existing parameter usage
 5. **Provide examples**: Include usage examples for new parameter categories
-
-### Development Setup
 
 ```bash
 git clone https://github.com/yourusername/paramlib.git
@@ -423,6 +482,7 @@ For questions or suggestions, please open an issue on GitHub or contact the main
 ### Common Issues
 
 1. **Import Errors**:
+
    ```python
    # Correct import
    from paramlib.global_parameters import BASIC_TIME_FORMAT_STRS
@@ -432,6 +492,7 @@ For questions or suggestions, please open an issue on GitHub or contact the main
    ```
 
 2. **Parameter Modification**:
+
    ```python
    # Safe parameter usage
    from paramlib.config_params import DATABASE_CREDENTIALS
@@ -442,6 +503,7 @@ For questions or suggestions, please open an issue on GitHub or contact the main
    ```
 
 3. **Version Compatibility**:
+
    ```python
    # Check parameter availability
    from paramlib.global_parameters import BASIC_TIME_FORMAT_STRS
