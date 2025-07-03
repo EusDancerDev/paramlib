@@ -3,7 +3,7 @@
 
 # paramlib/__init__.py
 
-__version__ = "3.4.5"
+__version__ = "3.4.6"
 
 # Define what should be available when using 'from paramlib import *'
 __all__ = [
