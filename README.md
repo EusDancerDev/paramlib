@@ -65,15 +65,22 @@ Before installing, please ensure the following dependencies are available on you
 pip install paramlib
 ```
 
-### For contributors/developers (with interdependent packages)
+### For contributors/developers (with latest Git versions)
 
 ```bash
-pip install -r requirements.txt
+# Install with development dependencies (includes latest Git versions)
+pip install -e .[dev]
+
+# Alternative: Use requirements-dev.txt for explicit Git dependencies
+pip install -r requirements-dev.txt
 pip install -e .
 ```
 
-- `requirements.txt` will install the interdependent packages (`filewise`, `pygenutils`) from their GitHub repositories
-- `pip install -e .` installs the package in editable mode for development
+**Benefits of the new approach:**
+
+- **Regular users**: Simple `pip install paramlib` with all dependencies included
+- **Developers**: Access to latest Git versions for development and testing
+- **PyPI compatibility**: All packages can be published without Git dependency issues
 
 **If you encounter import errors:**
 
@@ -83,15 +90,14 @@ pip install -e .
    pip install --upgrade paramlib
    ```
 
-2. **For developers**: Make sure you've installed the requirements first:
+2. **For developers**: Make sure you've installed the development dependencies:
 
    ```bash
-   pip install -r requirements.txt
-   pip install -e .
+   pip install -e .[dev]
    ```
 
 3. **Common issues**:
-   - **Missing Git dependencies**: The package depends on `filewise` and `pygenutils` from GitHub
+   - **Missing dependencies**: For regular users, all dependencies are included. For developers, use `pip install -e .[dev]`
    - **Python version**: Ensure you're using Python 3.10 or higher
    - **Pure Python library**: No external system dependencies required
 
@@ -112,7 +118,7 @@ try:
 except ImportError as e:
     print(f"❌ Import error: {e}")
     print("💡 For regular users: pip install paramlib")
-    print("💡 For developers: pip install -r requirements.txt && pip install -e .")
+    print("💡 For developers: pip install -e .[dev]")
 ```
 
 ## Usage
