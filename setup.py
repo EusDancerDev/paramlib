@@ -22,4 +22,7 @@ Created: {}
 from setuptools import setup
 
 # Defer to pyproject.toml for all configuration
-setup()
+setup(
+    packages=["paramlib"],
+    exclude_package_data={"": ["recipe*"]}
+)
