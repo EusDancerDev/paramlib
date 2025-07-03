@@ -27,9 +27,9 @@ All constant names in this module are in uppercase following Python naming conve
 
 # Basic time format strings
 BASIC_TIME_FORMAT_STRS = {
-    "H": "%Y-%m-%d %H:%M:%S",
-    "H_NO_DATE_SEP": "%Y%m%d %H:%M:%S",
-    "D": "%Y-%m-%d",
+    "H": "%F %T",
+    "H_NO_DATE_SEP": "%Y%m%d %T",
+    "D": "%F",
     "D_NO_DATE_SEP": "%Y%m%d",
     "M": "%Y-%m",
     "Y": "%Y"
@@ -37,15 +37,15 @@ BASIC_TIME_FORMAT_STRS = {
 
 # Non-standard time format strings
 NON_STANDARD_TIME_FORMAT_STRS = {
-    "CTIME_H": "%a %b %d %H:%M:%S %Y",
+    "CTIME_H": "%a %b %d %T %Y",
     "CTIME_D": "%a %b %d %Y",
     "CTIME_M": "%b %Y"
 }
 
 # Custom time format strings
 CUSTOM_TIME_FORMAT_STRS = {
-    "CT_EXCEL_SPANISH_H": "%d/%m/%y %H:%M:%S",
-    "CT_EXCEL_SPANISH_NO_BAR_H": "%d%m%y %H:%M:%S",
+    "CT_EXCEL_SPANISH_H": "%d/%m/%y %T",
+    "CT_EXCEL_SPANISH_NO_BAR_H": "%d%m%y %T",
     "CT_EXCEL_SPANISH_D": "%d/%m/%y",
     "CT_EXCEL_SPANISH_NO_BAR_D": "%d%m%y"
 }
