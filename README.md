@@ -36,73 +36,70 @@
 
 ### Prerequisites
 
-- **Python 3.10+**: Required for modern type annotations and features
-- **No external dependencies**: Pure Python library with minimal requirements
+Before installing, please ensure the following dependencies are available on your system:
 
-### For Regular Users
+- **External Tools** (required for full functionality):
+  - No external tools required (pure Python library)
 
-**For regular users** who want to use the package in their projects:
+- **Required Third-Party Libraries**:
+
+  ```bash
+  pip install pandas numpy
+  ```
+
+  Or via Anaconda (recommended channel: `conda-forge`):
+
+  ```bash
+  conda install -c conda-forge pandas numpy
+  ```
+
+- **Internal Package Dependencies**:
+
+  ```bash
+  pip install filewise pygenutils
+  ```
+
+### For regular users (from PyPI)
 
 ```bash
 pip install paramlib
 ```
 
-This automatically installs `paramlib` and all its dependencies from PyPI.
-
-### Package Updates
-
-To stay up-to-date with the latest version of this package, simply run:
+### For contributors/developers (with interdependent packages)
 
 ```bash
-pip install --upgrade paramlib
-```
-
-## Development Setup
-
-### For Contributors and Developers
-
-If you're planning to contribute to the project or work with the source code, follow these setup instructions:
-
-#### Quick Setup (Recommended)
-
-```bash
-# Clone the repository
-git clone https://github.com/EusDancerDev/paramlib.git
-cd paramlib
-
-# Install in editable mode with all dependencies
+pip install -r requirements.txt
 pip install -e .
 ```
 
-**Note**: The `-e` flag installs the package in "editable" mode, meaning changes to the source code are immediately reflected without reinstalling.
+- `requirements.txt` will install the interdependent packages (`filewise`, `pygenutils`) from their GitHub repositories
+- `pip install -e .` installs the package in editable mode for development
 
-This will automatically install all dependencies and set up the development environment.
+**If you encounter import errors:**
 
-#### Manual Setup (Advanced)
+1. **For PyPI users**: The package should install all dependencies automatically. If you get import errors, try:
 
-If you prefer to install dependencies manually:
+   ```bash
+   pip install --upgrade paramlib
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/EusDancerDev/paramlib.git
-cd paramlib
+2. **For developers**: Make sure you've installed the requirements first:
 
-# Install paramlib in editable mode
-pip install -e .
-```
+   ```bash
+   pip install -r requirements.txt
+   pip install -e .
+   ```
 
-If you encounter import errors after cloning:
-
-1. **Ensure dependencies are installed**: Run `pip install -e .` in the project directory
-2. **Verify Python environment**: Make sure you're using a compatible Python version (3.10+)
-3. **Check package structure**: Ensure all `__init__.py` files are present
+3. **Common issues**:
+   - **Missing Git dependencies**: The package depends on `filewise` and `pygenutils` from GitHub
+   - **Python version**: Ensure you're using Python 3.10 or higher
+   - **Pure Python library**: No external system dependencies required
 
 ### Verify Installation
 
-To verify that your installation is working correctly, you can run this quick test:
+To verify that your installation is working correctly:
 
 ```python
-# Test script to verify installation
 try:
     import paramlib
     from paramlib.global_parameters import COMMON_DELIMITER_LIST, BASIC_TIME_FORMAT_STRS
@@ -115,17 +112,8 @@ try:
 except ImportError as e:
     print(f"❌ Import error: {e}")
     print("💡 For regular users: pip install paramlib")
-    print("💡 For developers: pip install -e .")
+    print("💡 For developers: pip install -r requirements.txt && pip install -e .")
 ```
-
-### Implementation Notes
-
-This project is a **pure Python library** with no interdependent package dependencies:
-
-- **Self-contained**: All functionality is provided within the package itself
-- **No external dependencies**: Only requires pandas and numpy for enhanced functionality
-- **Easy setup**: Simple installation process for both users and developers
-- **Consistent structure**: Follows the same development setup pattern as other packages
 
 ## Usage
 

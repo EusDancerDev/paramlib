@@ -1,0 +1,10 @@
+# Core dependencies
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Git dependencies (interdependent packages)
+filewise @ git+https://github.com/EusDancerDev/filewise.git
+pygenutils @ git+https://github.com/EusDancerDev/pygenutils.git
+
+# Note: paramlib is a pure Python library with minimal dependencies
+# The Git dependencies are for enhanced functionality and integration 
