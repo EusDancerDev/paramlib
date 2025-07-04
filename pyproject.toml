@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paramlib"
-version = "3.4.7"
+version = "3.4.8"
 license = {file = "LICENSE"}
 description = "A Python library for managing configuration parameters and constants, centralizing access to application-wide settings and global constants"
 keywords = ["configuration", "parameters", "constants", "settings", "global variables"]

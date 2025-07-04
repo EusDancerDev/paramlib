@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [3.4.7] - 2025-07-04
+## [3.4.8] - 2025-07-04
 
-### Fixed (3.4.7)
+### Fixed (3.4.8)
 
-#### **General** (fixing; 3.4.7)
+#### **General** (fixing; 3.4.8)
 
 - Use `%F` and `%T` shorthands for date and time formatting, respectively.
   - Replace occurrences of `%Y-%m-%d` and `%H:%M:%S` with `%F` and `%T` where applicable, across multiple modules.
