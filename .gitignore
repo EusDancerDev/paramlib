@@ -62,9 +62,6 @@ logs/
 *.yml
 *.json
 
-# Ignore the Spyder project manager directory
-.spyproject
-
 # Documentation
 docs/_build/
 site/
