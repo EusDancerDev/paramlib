@@ -26,7 +26,7 @@ All notable changes to this project will be documented in this file.
   - These include abbreviation addressing and variable/key name standardisation.
 
 | Old variable name | New variable name |
-|:-----------------:|:-----------------:|
+| :--- | :--- |
 | `BASIC_FOUR_RULES` | `BASIC_ARITHMETIC_OPERATORS` |
 | `COMMON_DELIM_LIST` | `COMMON_DELIMITER_LIST` |
 | `NON_STD_TIME_FORMAT_STRS` | `NON_STANDARD_TIME_FORMAT_STRS` |
@@ -36,7 +36,7 @@ All notable changes to this project will be documented in this file.
 | `TIME_FREQUENCIES_SHORTER_1` | `TIME_FREQUENCIES_BRIEF` |
 
 | Dictionary variable (latest name) | Old key name | New key name |
-|:----------------------------------:|:------------:|:------------:|
+| :--- | :---: | :---: |
 | `BASIC_TIME_FORMAT_STRS` | `H_NODATESEP` | `H_NO_DATE_SEP` |
 | `BASIC_TIME_FORMAT_STRS` | `D_NODATESEP` | `D_NO_DATE_SEP` |
 | `CUSTOM_TIME_FORMAT_STRS` | `CT_EXCEL_SPANISH_NOBAR_D` | `CT_EXCEL_SPANISH_NO_BAR_D` |
