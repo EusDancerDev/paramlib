@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [3.5.0] - 2026-03-31
+
+### Changed (3.5.0)
+
+#### **Package Dependencies** (changing; 3.5.0)
+
+- **NumPy / Pandas:** require **`numpy>=2.2.3`** and **`pandas>=2.2.3`** in **`pyproject.toml`**, **`requirements.txt`**, **`requirements-dev.txt`**, and **`recipe/meta.yaml`**.
+
+---
+
 ## [3.4.10] - 2025-07-04
 
 ### Fixed (3.4.10)
