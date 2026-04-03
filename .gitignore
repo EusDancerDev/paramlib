@@ -58,8 +58,6 @@ logs/
 # Configuration files
 *.cfg
 *.ini
-*.yaml
-*.yml
 *.json
 
 # Documentation
