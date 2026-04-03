@@ -1,0 +1,48 @@
+{% set name = "paramlib" %}
+{% set version = "3.4.10" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=68.0
+    - wheel
+  run:
+    - python >=3.10
+    - pip
+    - numpy >=2.2.3
+    - pandas >=2.2.3
+    # Add other dependencies as needed
+
+test:
+  imports:
+    - paramlib
+  commands:
+    - python -c "import paramlib; print(paramlib.__version__)"
+
+about:
+  home: https://github.com/EusDancerDev/paramlib
+  license: MIT
+  license_file: LICENSE
+  summary: Centralised parameters, constants, and configuration primitives for Python applications
+  description: |
+    paramlib collects application-wide constants, typed parameter bundles, and shared defaults so
+    sibling packages avoid duplicated magic values. It is a thin, import-friendly layer meant for
+    scientific and automation codebases across the EusDancerDev ecosystem.
+  doc_url: https://github.com/EusDancerDev/paramlib#readme
+  dev_url: https://github.com/EusDancerDev/paramlib.git
+
+extra:
+  recipe-maintainers:
+    - EusDancerDev
