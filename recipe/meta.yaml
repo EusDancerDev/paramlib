@@ -1,5 +1,5 @@
 {% set name = "paramlib" %}
-{% set version = "3.4.10" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
