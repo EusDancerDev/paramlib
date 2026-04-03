@@ -4,13 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [3.5.0] - 2026-03-31
+## [3.5.0] - 2026-04-03
 
 ### Changed (3.5.0)
 
 #### **Package Dependencies** (changing; 3.5.0)
 
 - **NumPy / Pandas:** require **`numpy>=2.2.3`** and **`pandas>=2.2.3`** in **`pyproject.toml`**, **`requirements.txt`**, **`requirements-dev.txt`**, and **`recipe/meta.yaml`**.
+
+#### **Packaging** (changing; 3.5.0)
+
+- **Version:** release **3.5.0** recorded in **`pyproject.toml`**, **`paramlib/__init__.py`**, and **`recipe/meta.yaml`**.
+- **`.gitignore`:** remove **`*.yaml`** and **`*.yml`** from the ignored list so conda **`recipe/meta.yaml`** (and other YAML) can be tracked with a normal **`git add`**.
+- **`recipe/meta.yaml`:** expand **`about.summary`** and **`about.description`** for clearer conda/Anaconda metadata.
 
 ---
 
