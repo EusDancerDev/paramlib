@@ -55,10 +55,10 @@ logs/
 .env.test.local
 .env.production.local
 
-# Configuration files
-*.cfg
-*.ini
-*.json
+# Local configuration files
+*.local.cfg
+*.local.ini
+*.local.json
 
 # Documentation
 docs/_build/
